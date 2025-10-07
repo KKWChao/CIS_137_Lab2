@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4AE6EE9E2E95CEAC00F07A2E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4AE6EE9D2E95CEA400F07A2E /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4AE6EE7E2E95CE5500F07A2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		4AE6EE6F2E95CE5300F07A2E /* Lab2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE6EE7D2E95CE5500F07A2E /* Lab2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lab2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE6EE872E95CE5500F07A2E /* Lab2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lab2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AE6EE9D2E95CEA400F07A2E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		4AE6EE662E95CE5300F07A2E = {
 			isa = PBXGroup;
 			children = (
+				4AE6EE9D2E95CEA400F07A2E /* .gitignore */,
 				4AE6EE712E95CE5300F07A2E /* Lab2 */,
 				4AE6EE802E95CE5500F07A2E /* Lab2Tests */,
 				4AE6EE8A2E95CE5500F07A2E /* Lab2UITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE6EE9E2E95CEAC00F07A2E /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
