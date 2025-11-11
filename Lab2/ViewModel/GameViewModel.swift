@@ -17,18 +17,19 @@ import Foundation
 
 final class GameViewModel: ObservableObject {
     @Published private(set) var cards: [MemoryCard] = []
+    @Published var progress: Float = 0
 
     private var indexFlippedCard: Int?
-    private var flippedCount: Int = 0
+    private var totalMatched: Int = 0
     
     init() {
-        indexFlippedCard = nil
-        flippedCount = 0
         start();
     }
     
     func start() {
         var pairs: [MemoryCard] = []
+        indexFlippedCard = nil
+        resetScore()
         for i in 0..<6 {
             pairs.append(MemoryCard(value: i))
             pairs.append(MemoryCard(value: i))
@@ -50,9 +51,9 @@ final class GameViewModel: ObservableObject {
                 // Both cards match — mark them as permanently matched.
                 cards[potentialCheck].isMatched = true
                 cards[chosenIndex].isMatched = true
+                
+                updateScore()
             }
-            
-            
             
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
@@ -78,6 +79,16 @@ final class GameViewModel: ObservableObject {
             indexFlippedCard = chosenIndex
         }
         
+    }
+    
+    func updateScore() {
+        totalMatched += 1
+        progress = Float(totalMatched)/6.0
+    }
+    
+    func resetScore() {
+        totalMatched = 0
+        progress = 0
     }
 
 }

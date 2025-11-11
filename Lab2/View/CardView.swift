@@ -35,13 +35,10 @@ struct FrontCardView: View {
             RoundedRectangle(cornerRadius: 12)
                 // Color depends on whether the card is matched or still in play.
                 .fill(Color(red:theme.cardTheme.colorRed, green:theme.cardTheme.colorGreen, blue:theme.cardTheme.colorBlue))
-
-            // Outline border around the card for visual separation.
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(lineWidth: 2)
+                .frame(width: 100, height: 100)
             
             Image(systemName: "questionmark.circle.dashed")
-                .font(.system(size: 100))
+                .font(.system(size: 80))
         }
         .padding(4)
     }
@@ -58,17 +55,12 @@ struct BackCardView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
                 // Color depends on whether the card is matched or still in play.
-                
                 .fill(card.isMatched
                       ? Color.green.opacity(0.25)
                       : Color(red:theme.cardTheme.colorRed, green:theme.cardTheme.colorGreen, blue:theme.cardTheme.colorBlue).opacity(0.55))
-
-            // Outline border around the card for visual separation.
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(lineWidth: 2)
-                
+                .frame(width: 100, height: 100)
             
-            Text(theme.cardTheme.emoji[card.value]) // need to fix this, convert int into theme
+            Text(theme.cardTheme.emoji[card.value])
                 .font(.system(size: 80))
 
         }

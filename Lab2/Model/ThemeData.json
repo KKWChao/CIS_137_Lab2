@@ -3,24 +3,24 @@
         "id": "8c6f0c17-5e7e-47d2-bb5a-29e5f3af2c7d",
         "name": "Animal",
         "emoji": ["🐱","🐶","🐻","🐼","🐵","🐸"],
-        "colorRed": 0.00,
-        "colorGreen": 1.00,
-        "colorBlue": 0.00
+        "colorRed": 0.98,
+        "colorGreen": 0.52,
+        "colorBlue": 0.45
     },
     {
         "id": "32a01986-1dbe-4b1b-81ad-7e32a06a4c2a",
         "name": "Emoji",
         "emoji": ["😀","😂","🥶","🤓","🥳","😡"],
-        "colorRed": 1.00,
-        "colorGreen": 0.00,
-        "colorBlue": 0.00
+        "colorRed": 0.38,
+        "colorGreen": 0.78,
+        "colorBlue": 0.95
     },
     {
         "id": "e4a95ad9-22a3-4a62-bd3f-2e5937bfc59a",
         "name": "Food",
         "emoji": ["🍎","🍔","🍕","🍗","🍜","🍞"],
-        "colorRed": 0.00,
-        "colorGreen": 0.00,
-        "colorBlue": 1.00
+        "colorRed": 0.99,
+        "colorGreen": 0.93,
+        "colorBlue": 0.40
     }
 ]

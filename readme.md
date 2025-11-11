@@ -8,6 +8,7 @@ A simple memory matching game build with the MVVM architecture
 - Matching cards towoard winning
 - New game option
 - Theme switching
+- Progress bar
 
 ## How to play
 
@@ -30,15 +31,17 @@ CardMatchingGame/
 │   └── ThemeModel.swift
 │
 ├── Views/
-│   └── CardView.swift
+│   ├── CardView.swift
+│   ├── ContentView.swift
+│   └── GameProgressView.swift
 │
 ├── ViewModels/
 |   ├── GameViewModel.swift
 │   └── ThemeViewModel.swift
 │
-├── ContentView.swift
+├── Helper.swift
 │
-└── CardMatchingGameApp.swift
+└── Lab2App.swift
 ```
 
 ## Installation
