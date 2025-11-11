@@ -14,6 +14,8 @@ final class GameModelView: ObservableObject {
     private var flippedCount: Int = 0
     
     init() {
+        indexFlippedCard = nil
+        flippedCount = 0
         start();
     }
     
@@ -59,7 +61,6 @@ final class GameModelView: ObservableObject {
             }
         
         } else {
-            print("print \(chosenIndex)")
             for i in cards.indices { cards[i].isFlipped = false }
 
             // Then flip the selected card face-up.

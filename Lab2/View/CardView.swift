@@ -21,18 +21,19 @@ import SwiftUI
 /// Front card showing the question square
 struct FrontCardView: View {
     let card: MemoryCard
+    @ObservedObject var theme: ThemeModelView
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
                 // Color depends on whether the card is matched or still in play.
-                .fill(Color.blue.opacity(0.15))
+                .fill(theme.cardTheme.bgColor)
 
             // Outline border around the card for visual separation.
             RoundedRectangle(cornerRadius: 12)
                 .stroke(lineWidth: 2)
             
-            Image(systemName: "questionmark.square.fill")
+            Image(systemName: "questionmark.circle.dashed")
                 .font(.system(size: 100))
         }
         .padding(4)
@@ -44,6 +45,7 @@ struct FrontCardView: View {
 /// changes color if isMatch is true
 struct BackCardView: View {
     let card: MemoryCard
+    @ObservedObject var theme: ThemeModelView
     
     var body: some View {
         ZStack {
@@ -52,14 +54,16 @@ struct BackCardView: View {
                 
                 .fill(card.isMatched
                       ? Color.green.opacity(0.25)
-                      : Color.blue.opacity(0.15))
+                      : theme.cardTheme.bgColor.opacity(0.55))
 
             // Outline border around the card for visual separation.
             RoundedRectangle(cornerRadius: 12)
                 .stroke(lineWidth: 2)
+                
             
-            Text("\(card.value)") // need to fix this, convert int into theme
-                .font(.system(size: 50))
+            Text(theme.cardTheme.emoji[card.value]) // need to fix this, convert int into theme
+                .font(.system(size: 80))
+
         }
         .padding(4)
     }
@@ -71,15 +75,15 @@ struct BackCardView: View {
 /// Will remain flipped based on the status of isMatched
 struct FlipCard: View {
     let card: MemoryCard
-    let theme: String
+    @ObservedObject var themeViewModel: ThemeModelView
     
     var body: some View {
         ZStack {
             if card.isFlipped || card.isMatched {
-                BackCardView(card: card)
+                BackCardView(card: card, theme: themeViewModel)
                     .rotation3DEffect(.degrees(180), axis: (x: -1, y: 0, z: 0))
             } else {
-                FrontCardView(card: card)
+                FrontCardView(card: card, theme: themeViewModel)
             }
         }
         .rotation3DEffect(.degrees((card.isFlipped || card.isMatched) ? 180 : 0 ), axis: (x: 1, y: 0, z: 0))

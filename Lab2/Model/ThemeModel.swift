@@ -8,7 +8,7 @@
 import SwiftUICore
 
 struct Theme {
-    let name: String
-    let emoji: [String]
-    let bgColor: Color
+    var name: String
+    var emoji: [String]
+    var bgColor: Color
 }

@@ -8,10 +8,17 @@
 import SwiftUI
 
 final class ThemeModelView: ObservableObject {
-    @Published var cardTheme: Theme = Theme(name: "Animals", emoji: ["🐱","🐶","🐻","🐼","🐵","🐸"], bgColor: Color.orange)
+    @Published var cardTheme: Theme = Theme(name: "Animals", emoji: ["🐱","🐶","🐻","🐼","🐵","🐸"], bgColor: Color.blue)
     
-    
-    func switchTheme(to newTheme: Theme) {
-        cardTheme = newTheme
+    func switchTheme() {
+        let cardThemes: [Theme] = [
+            Theme(name:"Smiley", emoji: ["😀","😂","🥶","🤓","🥳","😡"], bgColor:Color.red ),
+            Theme(name: "Items", emoji: ["🐱","🐶","🐻","🐼","🐵","🐸"], bgColor: Color.blue),
+            Theme(name: "Food", emoji: ["🍎","🍔","🍕","🍗","🍜","🍞"], bgColor: Color.yellow)
+        ]
+        
+        
+        
+        cardTheme = cardThemes.randomElement() ?? cardTheme
     }
 }
