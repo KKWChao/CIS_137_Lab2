@@ -5,9 +5,17 @@
 //  Created by Kelvin Chao on 11/8/25.
 //
 
+/*
+ * REUSED FROM PRIOR GROUP
+ * Lab 3
+ * No Group
+ * Kelvin Chao
+ * 11/10/2026
+ */
+
 import Foundation
 
-final class GameModelView: ObservableObject {
+final class GameViewModel: ObservableObject {
     @Published private(set) var cards: [MemoryCard] = []
 
     private var indexFlippedCard: Int?

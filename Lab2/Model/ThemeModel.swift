@@ -5,6 +5,14 @@
 //  Created by Kelvin Chao on 11/8/25.
 //
 
+/*
+ * Lab 3
+ * No Group
+ * Kelvin Chao
+ * 11/10/2026
+ */
+
+
 import SwiftUICore
 
 struct Theme: Codable, Identifiable {

@@ -5,6 +5,13 @@
 //  Created by Kelvin Chao on 11/8/25.
 //
 
+/*
+ * Lab 3
+ * No Group
+ * Kelvin Chao
+ * 11/10/2026
+ */
+
 import SwiftUI
 
 /// ------------------------------------------------------------
@@ -21,7 +28,7 @@ import SwiftUI
 /// Front card showing the question square
 struct FrontCardView: View {
     let card: MemoryCard
-    @ObservedObject var theme: ThemeModelView
+    @ObservedObject var theme: ThemeViewModel
     
     var body: some View {
         ZStack {
@@ -45,7 +52,7 @@ struct FrontCardView: View {
 /// changes color if isMatch is true
 struct BackCardView: View {
     let card: MemoryCard
-    @ObservedObject var theme: ThemeModelView
+    @ObservedObject var theme: ThemeViewModel
     
     var body: some View {
         ZStack {
@@ -75,7 +82,7 @@ struct BackCardView: View {
 /// Will remain flipped based on the status of isMatched
 struct FlipCard: View {
     let card: MemoryCard
-    @ObservedObject var themeViewModel: ThemeModelView
+    @ObservedObject var themeViewModel: ThemeViewModel
     
     var body: some View {
         ZStack {

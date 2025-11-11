@@ -5,11 +5,19 @@
 //  Created by Kelvin Chao on 10/7/25.
 //
 
+/*
+ * Lab 3
+ * No Group
+ * Kelvin Chao
+ * 11/10/2026
+ */
+
+
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var game = GameModelView()
-    @StateObject private var themeViewModel = ThemeModelView()
+    @StateObject private var game = GameViewModel()
+    @StateObject private var themeViewModel = ThemeViewModel()
     
     private let columns = [GridItem(.adaptive(minimum: 100), spacing: 8)]
     
