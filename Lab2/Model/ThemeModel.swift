@@ -7,8 +7,11 @@
 
 import SwiftUICore
 
-struct Theme {
+struct Theme: Codable, Identifiable {
+    var id: String
     var name: String
     var emoji: [String]
-    var bgColor: Color
+    var colorRed: Double
+    var colorGreen: Double
+    var colorBlue: Double
 }

@@ -27,7 +27,7 @@ struct FrontCardView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
                 // Color depends on whether the card is matched or still in play.
-                .fill(theme.cardTheme.bgColor)
+                .fill(Color(red:theme.cardTheme.colorRed, green:theme.cardTheme.colorGreen, blue:theme.cardTheme.colorBlue))
 
             // Outline border around the card for visual separation.
             RoundedRectangle(cornerRadius: 12)
@@ -54,7 +54,7 @@ struct BackCardView: View {
                 
                 .fill(card.isMatched
                       ? Color.green.opacity(0.25)
-                      : theme.cardTheme.bgColor.opacity(0.55))
+                      : Color(red:theme.cardTheme.colorRed, green:theme.cardTheme.colorGreen, blue:theme.cardTheme.colorBlue).opacity(0.55))
 
             // Outline border around the card for visual separation.
             RoundedRectangle(cornerRadius: 12)
@@ -87,6 +87,6 @@ struct FlipCard: View {
             }
         }
         .rotation3DEffect(.degrees((card.isFlipped || card.isMatched) ? 180 : 0 ), axis: (x: 1, y: 0, z: 0))
-        .animation(.easeInOut(duration: 0.3), value: card.isFlipped || card.isMatched)
+        .animation(.easeInOut(duration: 0.3), value: card.isFlipped)
     }
 }

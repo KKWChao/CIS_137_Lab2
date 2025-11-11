@@ -71,9 +71,5 @@ final class GameModelView: ObservableObject {
         }
         
     }
-    
-    func check() {
-        
-    }
 
 }

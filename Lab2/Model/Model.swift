@@ -13,3 +13,4 @@ struct MemoryCard : Codable, Identifiable, Equatable {
     var isFlipped: Bool = false
     var isMatched: Bool = false
 }
+
